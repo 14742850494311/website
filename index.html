@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>23018050180130180702</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Manrope:wght@300&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 300;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 600;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      white-space: pre-wrap;
+      overflow: hidden;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      white-space: pre-wrap;
+      overflow: hidden;
+      font-weight: 300;
+    }
+
+    .visible {
+      opacity: 1;
+    }
+
+    .typing {
+      border-right: 0.15em solid #e0e0e0;
+    }
+
+    .hidden {
+      color: #0d0d0d;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title" class="typing"></h1>
+  <p id="line1">Τα κατάφερες καλά μέχρι εδώ</p>
+  <p id="line2">Αν συνεχίσεις, δεν θα είσαι ο ίδιος...</p>
+
+  <script>
+    async function typeWriter(id, text, delay) {
+      const el = document.getElementById(id);
+      for (let i = 0; i <= text.length; i++) {
+        el.textContent = text.substring(0, i);
+        await new Promise(res => setTimeout(res, delay));
+      }
+      el.classList.remove('typing');
+    }
+
+    async function startSequence() {
+      await typeWriter('title', 'JQOPHJVYJMOPEWMROMPA7901', 120);
+
+      await new Promise(res => setTimeout(res, 4500));
+      document.getElementById('line1').classList.add('visible');
+
+      await new Promise(res => setTimeout(res, 7000));
+      document.getElementById('line2').classList.add('visible');
+    }
+
+    startSequence();
+  </script>
+</body>
+<!-- Στέκομαι ψηλά ανάμεσα στο πλήθος, δεν φέρω όμως βάρος, ούτε ήχο.
+Χωρίς εμένα, το μονοπάτι είναι καθαρό -->
+</html>
